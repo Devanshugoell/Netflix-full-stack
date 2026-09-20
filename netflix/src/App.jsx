@@ -1,9 +1,14 @@
 import './App.css';
+import Body from './components/Body';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 function App() {
   return (
     <div className="App">
-      <h1 className='text-2xl text-amber-600 text-center'>This is heading</h1>
+      <Provider store={store}>
+      <Body />
+      </Provider>
     </div>
   );
 }
